@@ -10,6 +10,7 @@ pip3 install aliyun-python-sdk-alidns
 ## 2.下载本项目
 ```
 git clone https://github.com/LSH9832/aliyun_ddns.git
+git clone https://hub.fastgit.org/LSH9832/aliyun_ddns.git  # 国内镜像站
 ```
 
 ## 3.配置
