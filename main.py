@@ -47,14 +47,9 @@ class DDNS(object):
     def __getDomainInfo(self, SubDomain):
         request = DescribeSubDomainRecordsRequest.DescribeSubDomainRecordsRequest()
         request.set_accept_format('json')
-
-        # 指定查记的域名 格式为 'test.example.com'
         request.set_SubDomain(SubDomain)
-
         response = self.__client.do_action_with_exception(request)
         response = str(response, encoding='utf-8')
-
-        # 将获取到的记录转换成json对象并返回
         return json.loads(response)
 
     # 更新记录
@@ -64,10 +59,10 @@ class DDNS(object):
 
         request.set_Priority('1') if address_type == 'MX' else None
         request.set_TTL('600')
-        request.set_Value(address)          # 指向的新的地址（A:ipv4地址，AAAA:ipv6地址）
+        request.set_Value(address) 
         request.set_Type(address_type)
         request.set_RR(rr)
-        request.set_RecordId(record_id)     # 更新记录需要指定 record_id ，该字段为记录的唯一标识，可以在获取方法的返回信息中得到该字段的值
+        request.set_RecordId(record_id) 
 
         response = self.__client.do_action_with_exception(request)
         response = str(response, encoding='utf-8')
