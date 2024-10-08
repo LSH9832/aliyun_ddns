@@ -31,12 +31,12 @@ if not osp.isfile(CONFIG_FILE):
         },
         "tasks": [
             {
-                "domain": "cctv.com",
+                "domain": "your_ipv4_domain.com",
                 "record_type": "A",
                 "record_value": "www"
             },
             {
-                "domain": "cctv.com",
+                "domain": "your_ipv6_domain.com",
                 "record_type": "AAAA",
                 "record_value": "ipv6.www",
                 "interface": "eth0",
@@ -44,7 +44,7 @@ if not osp.isfile(CONFIG_FILE):
             }
         ]
     }
-    yaml.dump(cfg, open(CONFIG_FILE, "w"), yaml.Dumper)
+    yaml.dump(cfg, open(CONFIG_FILE, "w"), yaml.Dumper, sort_keys=False)
     print(f'modify {osp.abspath(CONFIG_FILE)} and then restart this code')
     exit(0)
 else:
