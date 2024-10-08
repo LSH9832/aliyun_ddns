@@ -15,13 +15,29 @@ git clone https://hub.fastgit.org/LSH9832/aliyun_ddns.git  # 国内镜像站
 
 ## 3.配置
 打开main.py<br>
-如果不是对公网ip进行解析，就把ip的获取方式的函数"get_outside_ip"改了。<br>
-然后找到脚本最下面
+如果不是对公网ip进行解析，就把ip的获取方式的函数"get_outside_ip"以及获取ipv6地址的函数"get_ipv6_ip"改了。<br>
+然后运行脚本
 ```
-if __name__ == '__main__':
+python main.py
 ```
-里面，把相关域名信息还有你自己的ID和KEY填进去即可。<br>
-代码很简单，看看怎么写的就会改了，无需多言。
+首次运行自动生成配置文件config.yaml
+```yaml
+default:
+  id: your_ip
+  key: your_key
+  regionID: cn-hangzhou
+  ttl: 600
+tasks:
+- domain: your_ipv4_domain.com
+  record_type: A
+  record_value: www
+- domain: your_ipv6_domain.com
+  index: 1
+  interface: eth0
+  record_type: AAAA
+  record_value: ipv6.www
+```
+修改相应配置，再次运行脚本即可开始ddns服务。
 
 ## 4.运行
 1.直接运行py文件即可。<br>
