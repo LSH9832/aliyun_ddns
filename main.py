@@ -73,7 +73,7 @@ def get_ipv6_ip(now_index=0):
             count = 0
                 
         elif flag and "inet6" in line:
-            print(line, flag)
+            # print(line, flag)
             if count == idx:
                 ip_str = line.split()[1]
                 break
