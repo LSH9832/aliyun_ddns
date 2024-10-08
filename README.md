@@ -1,5 +1,11 @@
 # 使用Python脚本实现在阿里云注册的域名的DDNS解析
 要求**python=3.X**
+
+```
+pyyaml
+pyopenssl==24.0.0
+```
+
 ## 1.安装阿里云第三方库
 ```
 pip3 install aliyun-python-sdk-core
