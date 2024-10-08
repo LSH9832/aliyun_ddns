@@ -1,21 +1,14 @@
 # 使用Python脚本实现在阿里云注册的域名的DDNS解析
-要求**python=3.X**
 
-```
-pyyaml
-pyopenssl==24.0.0
-```
 
-## 1.安装阿里云第三方库
-```
-pip3 install aliyun-python-sdk-core
-pip3 install aliyun-python-sdk-domain
-pip3 install aliyun-python-sdk-alidns
-```
-
-## 2.下载本项目
+## 1.下载本项目
 ```
 git clone https://github.com/LSH9832/aliyun_ddns.git
+```
+
+## 2.安装依赖库
+```
+pip3 install -r requirements.txt
 ```
 
 ## 3.配置
