@@ -1,0 +1,5 @@
+pyyaml
+pyopenssl==24.0.0
+aliyun-python-sdk-core
+aliyun-python-sdk-domain
+aliyun-python-sdk-alidns
