@@ -34,8 +34,8 @@ tasks:
 - domain: your_ipv6_domain.com
   record_type: AAAA
   record_value: ipv6.www
-  index: 1
   interface: eth0
+  index: 1
 ```
 修改相应配置，再次运行脚本即可开始ddns服务。
 
