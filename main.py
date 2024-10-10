@@ -72,7 +72,7 @@ def get_ipv6_ip(now_index=0):
             flag = interface in line
             count = 0
                 
-        elif flag and "inet6" in line:
+        elif flag and "inet6" in line and "<global>" in line:
             # print(line, flag)
             if count == idx:
                 ip_str = line.split()[1]
