@@ -21,7 +21,7 @@ python main.py
 首次运行自动生成配置文件config.yaml
 ```yaml
 default:
-  id: your_ip
+  id: your_id
   key: your_key
   regionID: cn-hangzhou
   ttl: 600
